@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+
 import os
 from pathlib import Path
 
@@ -138,5 +139,9 @@ if 'RAILWAY_STATIC_URL' in os.environ:
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('postgresql://postgres:YMNdoEmJJSCzybRLYaesOuBBmPmyOWrf@postgres.railway.internal:5432/railway'))
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
