@@ -23,10 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-$(2h+=c17u_*v!4p*s7=o+vi2bcweheu=ogku!vv04%*(w(=3w'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import os
+SECRET_KEY = os.getenv('SECRET_KEY')
 
-ALLOWED_HOSTS = ["*"]
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['firstprj.onrender.com']
+
 
 
 # Application definition
@@ -135,10 +140,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 if 'RAILWAY_STATIC_URL' in os.environ:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATIC_URL = '/static/'
-
-import dj_database_url
-
-DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
-}
 

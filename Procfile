@@ -1,1 +1,2 @@
-web: gunicorn firstprj.wsgi
+web: gunicorn your_project_name.wsgi
+
