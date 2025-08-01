@@ -148,7 +148,7 @@ import os
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
+        default=os.environ.get('postgresql://travello_db_user:JPyJEw3PeGEt0NisNUwawm1GT0KgowK1@dpg-d26597u3jp1c73cilfa0-a/travello_db')
     )
 }
 
