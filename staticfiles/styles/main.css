@@ -1,0 +1,64 @@
+/* Center the whole page content */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form container */
+.registerbox {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Heading */
+.registerbox .head {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Form inputs */
+.registerbox input[type="text"],
+.registerbox input[type="email"],
+.registerbox input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Submit button */
+.registerbox .button input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registerbox .button input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Message area */
+.registerbox h3 {
+    margin-top: 20px;
+    color: red;
+    font-size: 14px;
+}
