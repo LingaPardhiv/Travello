@@ -151,3 +151,5 @@ DATABASES = {
         default=os.environ.get('DATABASE_URL')
     )
 }
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
