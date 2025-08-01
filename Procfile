@@ -1,2 +1,1 @@
-web: gunicorn travello.wsgi
-
+web: gunicorn firstprj.wsgi
