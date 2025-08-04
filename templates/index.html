@@ -19,11 +19,12 @@
 		html {
  		 scroll-behavior: smooth;
 		}
-		.intro_background{
-            height: 500px;
+		.background_image {
+            height: 400px;
             width: 100%;
             background-size: cover;
             background-position: center;
+            border: 2px solid red; /* optional for debugging */
         }
 	  </style>
 </head>
@@ -223,7 +224,7 @@
 		<!-- Intro -->
 
 		<div class="intro">
-			<div class="intro_background" style="background-image: url('{% static 'images/home_slider.jpg' %}');></div>
+			<div class="background_image" style="background-image: url('{% static 'images/home_slider.jpg' %}');></div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
