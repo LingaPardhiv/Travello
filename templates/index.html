@@ -15,19 +15,11 @@
 	<link rel="stylesheet"  href="{% static 'styles/main_styles.css' %}">
 	<link rel="stylesheet"  href="{% static 'styles/responsive.css' %}">
 	<link rel="stylesheet"  href="{% static 'styles/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
 	  <style>
 		html {
  		 scroll-behavior: smooth;
-		}
-		.background_image {
-            height: 400px;
-            width: 100%;
-            background-size: cover;
-            background-position: center;
-            border: 2px solid red; /* optional for debugging */
-        }
-		.owl-item {
- 			 min-height: 400px !important;
 		}
 	  </style>
 </head>
@@ -128,7 +120,7 @@
 
 					<!-- Slide -->
 					<div class="owl-item">
-						<div class="background_image" style="background-image: url({% static 'images/home_slider.jpg' %});"></div>
+						<div style="height: 400px; width: 100%; background-image: url('{% static "images/home_slider.jpg" %}'); background-size: cover; background-position: center; border: 2px solid red;"></div>
 						<div class="home_slider_content_container">
 							<div class="container">
 								<div class="row">
@@ -617,6 +609,18 @@
 	<script src="{% static 'plugins/easing/easing.js' %}"></script>
 	<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
 	<script src="{% static 'js/custom.js' %}"></script>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script>
+  $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000
+      });
+  });
+</script>
 </body>
 
 </html>
