@@ -24,7 +24,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'unsafe-secret-key-for-dev')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['firstprj-service.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','firstprj-service.onrender.com']
 
 # ---------------------------
 # Applications
@@ -108,9 +108,13 @@ USE_TZ = True
 # ---------------------------
 # Static & Media Files
 # ---------------------------
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR,'firstprj/assets')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+#STATICFILES_DIRS = [BASE_DIR / 'static']
+#STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

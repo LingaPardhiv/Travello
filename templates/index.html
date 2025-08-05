@@ -15,8 +15,6 @@
 	<link rel="stylesheet"  href="{% static 'styles/main_styles.css' %}">
 	<link rel="stylesheet"  href="{% static 'styles/responsive.css' %}">
 	<link rel="stylesheet"  href="{% static 'styles/main.css' %}">
-	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
 	  <style>
 		html {
  		 scroll-behavior: smooth;
@@ -24,7 +22,6 @@
 		.owl-item {
   			min-height: 400px !important;
 		}
-
 	  </style>
 </head>
 
@@ -312,11 +309,6 @@
 								</div>
 							</div>
 							{% endfor %}
-
-
-
-							
-
 						</div>
 					</div>
 				</div>
@@ -614,17 +606,7 @@
 	<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
 	<script src="{% static 'js/custom.js' %}"></script>
 	<script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'js/owl.carousel.min.js' %}"></script>
-<script>
-  $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
-          items: 1,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 3000
-      });
-  });
-</script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 </body>
 
 </html>
